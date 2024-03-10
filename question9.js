@@ -17,35 +17,35 @@
 
 // Klassen Student
 class Student {
-    constructor(fullname, courses){
-        this.student = fullname;
-        this.courses = [];
+    constructor(fullname){
+        this.fullname = fullname;
+        this.course = []
     }
+ registerCourse(course) {
+    this.course.push(course)
+ }
 
-
-registerCourse(){
-    console.log(`Namn: ${this.fullname}, Kurs: ${this.courses} `)
-}
-listCourses(){
-
-}
+ listCourses(){
+    return this.course.map(x => x.getCourseInfo()).join('\n')
+ }
 
 }
 
 
 // Klassen Course
+
+
 class Course {
     constructor(name, yhp){
-        this.name = name;
-        this.yhp = yhp;
-    } 
+        this.name = name
+        this.yhp = yhp
+    }
 getCourseInfo(){
-
+    return `Course name: ${this.name}, YHP: ${this.yhp}`
 }
 
+
 }
-
-
 
 
 
