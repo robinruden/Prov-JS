@@ -9,13 +9,17 @@ const tweets = [
   ];
 
 // Din kod här:
-
+const updatedTweets = tweets.filter(x => x.id !== 823423)
 
 // 8.2 (2p) Använd map för att skapa en ny array "tweetsHtml" med endast texten från varje tweet inom <li>-taggar (utgå från updatedTweets-arrayen)
 // Omvandla arrayen till en sträng med metoden join('') på arrayen.
 // Visa den genererade listan med tweets på sidan inuti <ul id="tweets"></ul>  (skapa HTML-elementet med JavaScript eller lägg till dem i HTML-filen)
 
 // Din kod här:
+const tweetsHtml = updatedTweets.map(x => `<li>${x.text}</li)`).join('')
+document.getElementById('tweets').innerHTML = tweetsHtml
+
+
 
 
 

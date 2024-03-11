@@ -1,15 +1,14 @@
-class Student {
-    constructor(fullname, courses){
-        this.student = fullname;
-        this.courses = [];
+export class Student {
+    constructor (fullname){
+        this.fullname = fullname
+        this.courses = []
     }
 
+    registerCourse(x){
+        this.courses.push(x)
+    }
 
-registerCourse(){
-    console.log(`Namn: ${this.fullname}, Kurs: ${this.courses} `)
-}
-listCourses(){
-
-}
-
+    listCourses(){
+        return this.courses.map(x => x.getCourseInfo()).join('')
+    }
 }
